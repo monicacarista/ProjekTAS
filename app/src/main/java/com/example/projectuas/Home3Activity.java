@@ -5,23 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
-import com.example.projectuas.Model.DaftarKRS;
-
-public class EditKRSActivity extends AppCompatActivity {
-
+public class Home3Activity extends AppCompatActivity {
+ImageButton imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_krs);
+        setContentView(R.layout.activity_home2);
 
-        Button btnSimpanKRS =(Button)findViewById(R.id.btnSimpanKRS);
 
-        btnSimpanKRS.setOnClickListener(new View.OnClickListener(){
+        imageButton = (ImageButton) findViewById(R.id.imgLogo);
+        imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(EditKRSActivity.this, DaftarKRSActivity.class);
+                Intent i = new Intent(Home3Activity.this,MainActivity.class);
                 startActivity(i);
             }
         });

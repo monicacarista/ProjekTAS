@@ -53,35 +53,35 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
         android:text="Foto"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimpanMhs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmailMhs"
         app:layout_constraintVertical_bias="0.078" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSimpanMhs"
         android:layout_width="398dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="280dp"
+        android:layout_marginBottom="188dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFotoMhs"
+        app:layout_constraintVertical_bias="0.729" />
 
     <Button
         android:id="@+id/btnBrowseMhs"
         android:layout_width="102dp"
         android:layout_height="38dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:text="Browse"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/etxtFotoMhs"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <EditText
         android:id="@+id/editText"
@@ -127,7 +127,7 @@
         android:layout_width="217dp"
         android:layout_height="37dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,11 +140,9 @@
         android:layout_width="143dp"
         android:layout_height="36dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintStart_toEndOf="@+id/txtFotoMhs"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

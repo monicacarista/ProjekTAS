@@ -35,7 +35,7 @@ public class CRUDDosenActivity extends AppCompatActivity {
     }
     private void addData(){
         crudArrayList = new ArrayList<>();
-        crudArrayList.add(new CRUDDosen("S.Kom","m@gmail.com","JOGJA",R.drawable.xx));
+        crudArrayList.add(new CRUDDosen("S.Kom","KatonWijana@gmail.com","JOGJA",R.drawable.xx));
    //     crudArrayList.add(new CRUDDosen("S.Ko","m@gmail.com","JOGJA",R.drawable.xx));
    //     crudArrayList.add(new CRUDDosen("S.Km","m@gmail.com","JOGJA",R.drawable.xx));
    //     crudArrayList.add(new CRUDDosen("S.Kll","mo@gmail.com","JOGJA",R.drawable.xx));

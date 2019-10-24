@@ -20,7 +20,7 @@ ImageButton imageButton;
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(DosenActivity.this,CRUDDosenActivity.class);
+                Intent i = new Intent(DosenActivity.this,EditDosenActivity.class);
                 startActivity(i);
             }
         });
@@ -29,7 +29,7 @@ ImageButton imageButton;
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(DosenActivity.this,DaftarKRSActivity.class);
+                Intent i = new Intent(DosenActivity.this,EditKRSActivity.class);
                 startActivity(i);
             }
         });

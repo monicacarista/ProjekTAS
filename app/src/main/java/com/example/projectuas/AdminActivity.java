@@ -36,7 +36,7 @@ ImageButton imageButton;
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(AdminActivity.this,CRUDMatkulActivity.class);
+                Intent i = new Intent(AdminActivity.this, TampilMatkulActivity.class);
                 startActivity(i);
             }
         });
@@ -45,7 +45,7 @@ ImageButton imageButton;
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(AdminActivity.this,CRUDKRSActivity.class);
+                Intent i = new Intent(AdminActivity.this, EditKRSActivity.class);
                 startActivity(i);
             }
         });
@@ -54,7 +54,7 @@ ImageButton imageButton;
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(AdminActivity.this,DataDiriMhsActivity.class);
+                Intent i = new Intent(AdminActivity.this,TampilMahasiswaActivity.class);
                 startActivity(i);
             }
         });

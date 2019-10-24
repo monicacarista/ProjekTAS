@@ -9,26 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TampilMhsActivity"></activity>
-        <activity android:name=".DaftarKRSActivity" />
-        <activity android:name=".DataDiriMhsActivity" />
-        <activity android:name=".LihatDataKelasActivity" />
-        <activity android:name=".EditKRSActivity" />
-        <activity android:name=".CRUDKRSActivity" />
-        <activity android:name=".EditMatkulActivity" />
-        <activity android:name=".CRUDMatkulActivity" />
-        <activity android:name=".EditDosenActivity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".CRUDDosenActivity"></activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".AdminActivity" />
-        <activity android:name=".DosenActivity">
+        <activity android:name=".Home3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TampilMahasiswaActivity" />
+        <activity android:name=".DaftarKRSActivity" />
+        <activity android:name=".DataDiriMhsActivity" />
+        <activity android:name=".LihatDataKelasActivity" />
+        <activity android:name=".EditKRSActivity" />
+        <activity android:name=".TampilKRSActivity" />
+        <activity android:name=".EditMatkulActivity" />
+        <activity android:name=".TampilMatkulActivity" />
+        <activity android:name=".EditDosenActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".CRUDDosenActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AdminActivity">
+
+        </activity>
+        <activity android:name=".DosenActivity"></activity>
         <activity android:name=".MainActivity" />
     </application>
 
