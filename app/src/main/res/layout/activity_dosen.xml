@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DosenActivity">
+
+    <ImageButton
+        android:id="@+id/imbDaftarKRS"
+        android:layout_width="92dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/xx"
+        android:onClick="imbDataDiri"
+        app:layout_constraintEnd_toStartOf="@+id/imbLihatKelas"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbDataDiri"
+        android:layout_width="92dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="imbDataKrs"
+        android:src="@drawable/xx"
+        app:layout_constraintEnd_toStartOf="@+id/imbDaftarKRS"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbLihatKelas"
+        android:layout_width="92dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/xx"
+        android:onClick="imbLihatKelas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="85dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="Data Diri"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imbDataDiri"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="92dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="Daftar KRS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imbDaftarKRS"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Lihat Kelas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/imbLihatKelas"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projectuas">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TampilMhsActivity"></activity>
+        <activity android:name=".DaftarKRSActivity" />
+        <activity android:name=".DataDiriMhsActivity" />
+        <activity android:name=".LihatDataKelasActivity" />
+        <activity android:name=".EditKRSActivity" />
+        <activity android:name=".CRUDKRSActivity" />
+        <activity android:name=".EditMatkulActivity" />
+        <activity android:name=".CRUDMatkulActivity" />
+        <activity android:name=".EditDosenActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".CRUDDosenActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".DosenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
