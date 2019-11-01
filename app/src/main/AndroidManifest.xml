@@ -25,14 +25,14 @@
         <activity android:name=".CRUDDosenActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".AdminActivity">
+
+        </activity>
+        <activity android:name=".DosenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".DosenActivity">
-
         </activity>
         <activity android:name=".MainActivity" >
 
