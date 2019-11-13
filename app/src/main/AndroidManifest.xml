@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Home3Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".TampilMahasiswaActivity" />
         <activity android:name=".DaftarKRSActivity" />
@@ -21,18 +25,13 @@
         <activity android:name=".EditMatkulActivity" />
         <activity android:name=".TampilMatkulActivity" />
         <activity android:name=".EditDosenActivity" />
-        <activity android:name=".Main2Activity" />
         <activity android:name=".CRUDDosenActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".AdminActivity">
 
         </activity>
         <activity android:name=".DosenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" >
 
