@@ -1,4 +1,4 @@
-package com.example.projectuas;
+package com.example.projectuas.CRUDKRS;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.projectuas.Model.DaftarKRS;
+import com.example.projectuas.R;
 
 public class EditKRSActivity extends AppCompatActivity {
 
@@ -45,7 +45,7 @@ public class EditKRSActivity extends AppCompatActivity {
                         })
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(EditKRSActivity.this,DaftarKRSActivity.class);
+                                Intent i = new Intent(EditKRSActivity.this, DaftarKRSActivity.class);
                                 startActivity(i);
 
                                 Toast.makeText(EditKRSActivity.this, "Save Berhasil !!",

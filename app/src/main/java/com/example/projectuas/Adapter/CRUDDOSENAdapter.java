@@ -1,20 +1,18 @@
 package com.example.projectuas.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.projectuas.EditDosenActivity;
 import com.example.projectuas.Model.CRUDDosen;
 import com.example.projectuas.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -35,13 +33,23 @@ public class CRUDDOSENAdapter extends RecyclerView.Adapter<CRUDDOSENAdapter.View
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.card_view_d,
                 parent, false);
+        context = parent.getContext();
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(100*i, 100*i);//menghubungkan data, data dari konstruktor .
-        holder.imgdos.setImageResource(dosenArrayList.get(position).getImgdos());
+
+
+        //holder.imgdos.setImageResource(dosenArrayList.get(position).getFoto());
+        holder.imgdos.getLayoutParams().width=100;
+        holder.imgdos.getLayoutParams().height=100;
+        if(dosenArrayList.get(position).getFoto()!=null){
+            Picasso.with(this.context).load(dosenArrayList.get(position).getFoto()).into(holder.imgdos);
+        }
+        holder.txtNIDN.setText(dosenArrayList.get(position).getNama());
+        holder.txtNama.setText(dosenArrayList.get(position).getNama());
         holder.txtGelar.setText(dosenArrayList.get(position).getGelar());
         holder.txtEmail.setText(dosenArrayList.get(position).getEmail());
         holder.txtAlamat.setText(dosenArrayList.get(position).getAlamat());
@@ -64,11 +72,13 @@ public class CRUDDOSENAdapter extends RecyclerView.Adapter<CRUDDOSENAdapter.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtGelar, txtEmail, txtAlamat;
+        private TextView txtGelar, txtEmail, txtAlamat, txtNama, txtNIDN;
         ImageView imgdos;
 
         public ViewHolder(View view){
             super(view);
+            txtNama = view.findViewById(R.id.txtNama);
+            txtNIDN=view.findViewById(R.id.txtNIDN);
             imgdos=view.findViewById(R.id.imgdos);
             txtGelar = view.findViewById(R.id.txtGelar);
             txtEmail = view.findViewById(R.id.txtEmail);

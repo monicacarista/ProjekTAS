@@ -1,4 +1,4 @@
-package com.example.projectuas;
+package com.example.projectuas.CRUDMatkul;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,13 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.projectuas.Adapter.DaftarKRSAdapter;
 import com.example.projectuas.Adapter.TampilMatkulAdapter;
-import com.example.projectuas.Model.DaftarKRS;
 import com.example.projectuas.Model.TampilMatkul;
+import com.example.projectuas.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TampilMatkulActivity extends AppCompatActivity {
     private RecyclerView recyclerView;

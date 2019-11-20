@@ -1,4 +1,4 @@
-package com.example.projectuas;
+package com.example.projectuas.CRUDKRS;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,10 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.projectuas.Adapter.CRUDDOSENAdapter;
 import com.example.projectuas.Adapter.DaftarKRSAdapter;
-import com.example.projectuas.Model.CRUDDosen;
 import com.example.projectuas.Model.DaftarKRS;
+import com.example.projectuas.R;
 
 import java.util.ArrayList;
 import java.util.List;

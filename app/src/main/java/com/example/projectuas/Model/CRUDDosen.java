@@ -1,19 +1,58 @@
 package com.example.projectuas.Model;
 
-public class CRUDDosen {
-    private String gelar;
-    private String email;
-    private String alamat;
-    private int imgdos;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-    public CRUDDosen(String gelar, String email,  String alamat, int imgdos){
+public class CRUDDosen {
+    @SerializedName("id")
+    @Expose
+    private int id;
+    @SerializedName("nidn")
+    @Expose
+    private String nidn;
+    @SerializedName("nama")
+    @Expose
+    private String nama;
+    @SerializedName("gelar")
+    @Expose
+    private String gelar;
+    @SerializedName("email")
+    @Expose
+    private String email;
+    @SerializedName("alamat")
+    @Expose
+    private String alamat;
+    @SerializedName("foto")
+    @Expose
+    private String foto;
+
+    public CRUDDosen(String gelar, String email,  String alamat, String foto){
 
         this.gelar = gelar;
         this.email = email;
         this.alamat =alamat;
-        this.imgdos = imgdos;
+        this.foto = foto;
 
     }
+
+    public CRUDDosen(String gelar, String email,  String nama, String nidn, String alamat, String foto,int id){
+        this.id = id;
+        this.nama= nama;
+        this.nidn = nidn;
+        this.gelar = gelar;
+        this.email = email;
+        this.alamat =alamat;
+        this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getGelar() {
         return gelar;
     }
@@ -21,11 +60,20 @@ public class CRUDDosen {
         this.gelar = gelar;
     }
 
-    public int getImgdos(){
-        return imgdos;
+    public String getFoto() {
+        return foto;
     }
-    public void setImgdos(int imageResource) {
-        this.imgdos = imgdos;
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
     public String getEmail() {

@@ -25,8 +25,8 @@
 
         <ImageView
             android:id="@+id/imgdos"
-            android:layout_width="123dp"
-            android:layout_height="138dp"
+            android:layout_width="168dp"
+            android:layout_height="204dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:clickable="true"
@@ -56,11 +56,20 @@
             android:id="@+id/txtNIDN"
             android:layout_width="276dp"
             android:layout_height="39dp"
-            android:layout_marginTop="16dp"
-            android:text="NIDN-NAMA DOSEN"
+            android:text="NIDN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/txtGelar"
+            app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="260dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:text="nama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgdos"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

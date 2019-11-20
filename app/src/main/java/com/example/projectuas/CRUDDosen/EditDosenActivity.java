@@ -1,4 +1,4 @@
-package com.example.projectuas;
+package com.example.projectuas.CRUDDosen;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.projectuas.AdminActivity;
+import com.example.projectuas.R;
 
 public class EditDosenActivity extends AppCompatActivity {
 
@@ -35,7 +38,7 @@ public class EditDosenActivity extends AppCompatActivity {
                 builder.setMessage("Apakah anda ingin menyimpan?")
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(EditDosenActivity.this,AdminActivity.class);
+                                Intent i = new Intent(EditDosenActivity.this, AdminActivity.class);
                                 startActivity(i);
                                 Toast.makeText(EditDosenActivity.this, "Tidak jadi Save",
                                         Toast.LENGTH_SHORT).show();
@@ -43,7 +46,7 @@ public class EditDosenActivity extends AppCompatActivity {
                         })
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(EditDosenActivity.this,CRUDDosenActivity.class);
+                                Intent i = new Intent(EditDosenActivity.this, CRUDDosenActivity.class);
                                 startActivity(i);
 
                                 Toast.makeText(EditDosenActivity.this, "Save Berhasil !!",
