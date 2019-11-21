@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.projectuas.AdminActivity;
 import com.example.projectuas.CRUDKRS.EditKRSActivity;
+import com.example.projectuas.CRUDKRS.TampilKRSActivity;
+import com.example.projectuas.CRUDMahasiswa.TampilMahasiswaActivity;
 import com.example.projectuas.LihatDataKelasActivity;
 import com.example.projectuas.MainActivity;
 import com.example.projectuas.R;
@@ -31,11 +33,13 @@ ImageButton imageButton;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dosen);
 
-      
+        ImageButton imbDaftarKRS = (ImageButton) findViewById(R.id.imbDaftarKRS);
+        ImageButton imbDataDiri = (ImageButton) findViewById(R.id.imbDataDiri);
+        ImageButton imbLihatKelas = (ImageButton) findViewById(R.id.imbLihatKelas);
+        Button btnlogout = (Button) findViewById(R.id.btnLogout3);
 
         Button logOutButton = (Button)findViewById(R.id.btnLogout3);
         //resetButton.setOnClickListener(resetButtonListener);
-
 
         logOutButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -58,9 +62,6 @@ ImageButton imageButton;
                                 edit.commit();
                                 Intent i = new Intent(DosenActivity.this, MainActivity.class);
                                 startActivity(i);
-
-//                                Toast.makeText(DosenActivity.this, "Logout berhasil !!",
-//                                        Toast.LENGTH_SHORT).show();
                             }
                         });
                 AlertDialog dialog = builder.create();
@@ -68,23 +69,23 @@ ImageButton imageButton;
             }
         });
 
-        imageButton.setOnClickListener(new View.OnClickListener(){
+        imbDaftarKRS.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(DosenActivity.this, EditDosenActivity.class);
+                Intent i = new Intent(DosenActivity.this, TampilKRSActivity.class);
                 startActivity(i);
             }
         });
 
-        imageButton.setOnClickListener(new View.OnClickListener(){
+        imbDataDiri.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(DosenActivity.this, EditKRSActivity.class);
+                Intent i = new Intent(DosenActivity.this, TampilMahasiswaActivity.class);
                 startActivity(i);
             }
         });
 
-        imageButton.setOnClickListener(new View.OnClickListener(){
+        imbLihatKelas.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent i = new Intent(DosenActivity.this, LihatDataKelasActivity.class);
@@ -95,13 +96,5 @@ ImageButton imageButton;
 
 
     }
-    public void imbDataDiri(View view) {
-        Toast.makeText(getApplicationContext(), "Kamu Mengklik Button Gambar", Toast.LENGTH_LONG).show();
-    }
-    public void imbDataKrs(View view) {
-        Toast.makeText(getApplicationContext(), "Kamu Mengklik Button Gambar", Toast.LENGTH_LONG).show();
-    }
-    public void imbLihatKelas(View view) {
-        Toast.makeText(getApplicationContext(), "Kamu Mengklik Button Gambar", Toast.LENGTH_LONG).show();
-    }
+    
 }

@@ -25,7 +25,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             if(statusLogin.equals("Admin")){
                 Intent intent = new Intent(SplashScreenActivity.this, AdminActivity.class);
                 startActivity(intent);
-            }else if(statusLogin.equals("Dosen")){
+            }else if(statusLogin.equals("Dos")){
                 Intent intent = new Intent(SplashScreenActivity.this, DosenActivity.class);
                 startActivity(intent);
             }

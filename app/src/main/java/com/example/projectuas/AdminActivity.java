@@ -34,51 +34,11 @@ ImageButton imageButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
-//
-//        imageButton = (ImageButton) findViewById(R.id.imbDataDiriAd);
-//        imageButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent i = new Intent(AdminActivity.this, DataDiriMhsActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        imageButton = (ImageButton) findViewById(R.id.imbDataDosen);
-//        imageButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent i = new Intent(AdminActivity.this, CRUDDosenActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        imageButton = (ImageButton) findViewById(R.id.imbDaftarMatkulD);
-//        imageButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent i = new Intent(AdminActivity.this, TampilMatkulActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        imageButton = (ImageButton) findViewById(R.id.imbKelolaKRS);
-//        imageButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent i = new Intent(AdminActivity.this, EditKRSActivity.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        imageButton = (ImageButton) findViewById(R.id.imbDaftarMhs);
-//        imageButton.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent i = new Intent(AdminActivity.this, TampilMahasiswaActivity.class);
-//                startActivity(i);
-//            }
-//        });
+        ImageButton imbDatadiriAd = (ImageButton) findViewById(R.id.imbDataDiri);
+        ImageButton imbDataDosen = (ImageButton) findViewById(R.id.imbDataDosen);
+        ImageButton imbDaftarMatkul = (ImageButton) findViewById(R.id.imbDaftarMatkulD);
+        ImageButton imbKelolaKRS = (ImageButton) findViewById(R.id.imbKelolaKRS);
+        ImageButton imbDaftarMhs = (ImageButton) findViewById(R.id.imbDaftarMhs);
         Button logOutButton = (Button)findViewById(R.id.btnLogout2);
         //resetButton.setOnClickListener(resetButtonListener);
 
@@ -104,9 +64,6 @@ ImageButton imageButton;
                                 edit.commit();
                                 Intent i = new Intent(AdminActivity.this,MainActivity.class);
                                 startActivity(i);
-
-//                                Toast.makeText(AdminActivity.this, "Logout berhasil !!",
-//                                        Toast.LENGTH_SHORT).show();
                             }
                         });
                 AlertDialog dialog = builder.create();
@@ -117,7 +74,7 @@ ImageButton imageButton;
         imbDatadiriAd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(AdminActivity.this, TampilMahasiswa.class);
+                Intent i = new Intent(AdminActivity.this, TampilMahasiswaActivity.class);
                 startActivity(i);
             }
         });
@@ -125,7 +82,7 @@ ImageButton imageButton;
         imbDataDosen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(AdminActivity.this, CRUDDosen.class);
+                Intent i = new Intent(AdminActivity.this, CRUDDosenActivity.class);
                 startActivity(i);
             }
         });

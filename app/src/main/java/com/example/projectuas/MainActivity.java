@@ -3,10 +3,10 @@ package com.example.projectuas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.content.SharedPreferences;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,20 +14,20 @@ import android.widget.Toast;
 import com.example.projectuas.CRUDDosen.DosenActivity;
 
 public class MainActivity extends AppCompatActivity {
-    EditText email, password;
+    EditText email, pass;
     Button login;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-    CheckBox savelogincheckbox;
-    Boolean saveLogin;
+    Boolean savelogin;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         email = (EditText) findViewById(R.id.txtEmail);
-        password = (EditText) findViewById(R.id.txtPass);
+        pass = (EditText) findViewById(R.id.txtPass);
         login = (Button) findViewById(R.id.btnSignIn);
         sharedPreferences = getSharedPreferences("loginref", MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
                 login();
             }
         });
-        saveLogin = sharedPreferences.getBoolean("savelogin", true);
-        if (saveLogin == true) {
+        savelogin = sharedPreferences.getBoolean("savelogin", true);
+        if (savelogin == true) {
             email.setText(sharedPreferences.getString("username", null));
-            password.setText(sharedPreferences.getString("password", null));
+            pass.setText(sharedPreferences.getString("password", null));
         }
-
     }
+
 
     public void login() {
         String emaail = email.getText().toString();
-        String paassword = password.getText().toString();
+        String password = pass.getText().toString();
         if (emaail.contains("@si.ukdw.ac.id") ) {
             editor.putString("isLogin","Dos");
             editor.commit();

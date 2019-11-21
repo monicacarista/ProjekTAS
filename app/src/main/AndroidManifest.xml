@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".CRUDMahasiswa.TampilMahasiswaActivity" />
         <activity android:name=".CRUDKRS.DaftarKRSActivity" />
@@ -25,11 +29,7 @@
         <activity android:name=".CRUDMatkul.TampilMatkulActivity" />
         <activity android:name=".CRUDDosen.EditDosenActivity" />
         <activity android:name=".CRUDDosen.CRUDDosenActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AdminActivity"></activity>
         <activity android:name=".CRUDDosen.DosenActivity">
