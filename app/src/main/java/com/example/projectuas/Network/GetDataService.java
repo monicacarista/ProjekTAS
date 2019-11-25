@@ -5,8 +5,8 @@ import com.example.projectuas.Model.CRUDDosen;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.example.projectuas.Model.DefaultResult;
-//import  com.example.projectuas.Model.CRUDDosen;
+import com.example.projectuas.Model.DefaultResult;
+import  com.example.projectuas.Model.CRUDDosen;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -21,17 +21,17 @@ public interface GetDataService {
     Call<ArrayList<CRUDDosen>> getDosenAll(@Path("nim_progmob") String nim_progmob);
     //Call<List<Dosen>> getDosenAll(@Query("nim_progmob") String nim_progmob);
 
-//    @FormUrlEncoded
-//    @POST("/api/progmob/dosen/create")
-//    Call<DefaultResult> insert_dosen(
-//            @Field("nama") String nama,
-//            @Field("nidn") String nidn,
-//            @Field("alamat") String alamat,
-//            @Field("email") String email,
-//            @Field("gelar") String gelar,
-//            @Field("foto") String foto,
-//            @Field("nim_progmob") String nim_progmob
-//    );
+    @FormUrlEncoded
+    @POST("/api/progmob/dosen/create")
+    Call<DefaultResult> insert_dosen(
+            @Field("nama") String nama,
+            @Field("nidn") String nidn,
+            @Field("alamat") String alamat,
+            @Field("email") String email,
+            @Field("gelar") String gelar,
+            @Field("foto") String foto,
+            @Field("nim_progmob") String nim_progmob
+    );
 
     /*@FormUrlEncoded
     @POST("/si_mapping/api/user_login.php")

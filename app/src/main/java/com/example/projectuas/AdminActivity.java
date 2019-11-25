@@ -23,7 +23,7 @@ import com.example.projectuas.Model.TampilMahasiswa;
 import com.example.projectuas.Model.TampilMatkul;
 
 public class AdminActivity extends AppCompatActivity {
-ImageButton imageButton;
+
     ImageButton imbDatadiriAd;
     ImageButton imbDataDosen;
     ImageButton imbDaftarMatkul;
@@ -71,13 +71,14 @@ ImageButton imageButton;
             }
         });
 
-        imbDatadiriAd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(AdminActivity.this, TampilMahasiswaActivity.class);
-                startActivity(i);
-            }
-        });
+//        imbDatadiriAd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(AdminActivity.this, DataDiriMhsActivity.class);
+//                startActivity(i);
+//            }
+//        });
+
 
         imbDataDosen.setOnClickListener(new View.OnClickListener() {
             @Override

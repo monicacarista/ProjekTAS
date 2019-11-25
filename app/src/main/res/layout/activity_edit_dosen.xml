@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/txtNamaDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="76dp"
         android:text="Nama"
@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/txtNidnDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="NIDN"
@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/txtAlamatDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Alamat"
@@ -39,7 +39,7 @@
     <TextView
         android:id="@+id/txtEmailDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Email"
@@ -49,7 +49,7 @@
     <TextView
         android:id="@+id/txtGelarDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Gelar"
@@ -59,7 +59,7 @@
     <TextView
         android:id="@+id/txtFotoDosen"
         android:layout_width="91dp"
-        android:layout_height="24dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="Foto"
@@ -70,8 +70,8 @@
 
     <EditText
         android:id="@+id/etxtNamaDosen"
-        android:layout_width="200dp"
-        android:layout_height="24dp"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
         android:layout_marginTop="76dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -82,8 +82,8 @@
 
     <EditText
         android:id="@+id/etxtNidnDosen"
-        android:layout_width="200dp"
-        android:layout_height="24dp"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -94,8 +94,8 @@
 
     <EditText
         android:id="@+id/etxtAlamatDosen"
-        android:layout_width="200dp"
-        android:layout_height="24dp"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -106,8 +106,8 @@
 
     <EditText
         android:id="@+id/etxtEmailDosen"
-        android:layout_width="200dp"
-        android:layout_height="24dp"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -118,8 +118,8 @@
 
     <EditText
         android:id="@+id/etxtGelarDosen"
-        android:layout_width="200dp"
-        android:layout_height="24dp"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -129,12 +129,12 @@
         app:layout_constraintTop_toBottomOf="@+id/etxtEmailDosen" />
 
 
-
     <Button
         android:id="@+id/btnBrowse"
         android:layout_width="93dp"
         android:layout_height="35dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="Browse"
         app:layout_constraintBottom_toTopOf="@+id/btnSimpanDosen"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,7 +148,7 @@
         android:layout_width="369dp"
         android:layout_height="49dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="92dp"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
