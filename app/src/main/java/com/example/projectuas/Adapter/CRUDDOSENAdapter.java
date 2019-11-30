@@ -1,6 +1,7 @@
 package com.example.projectuas.Adapter;
 
 import android.content.Context;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +72,9 @@ public class CRUDDOSENAdapter extends RecyclerView.Adapter<CRUDDOSENAdapter.View
         return (dosenArrayList !=null)? dosenArrayList.size() :0;   //jika array mhs 0 maka akan kmbli ke ukuran array list awal
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder
+    implements View.OnCreateContextMenuListener
+    {
         private TextView txtGelar, txtEmail, txtAlamat, txtNama, txtNIDN;
         ImageView imgdos;
 
@@ -83,6 +86,7 @@ public class CRUDDOSENAdapter extends RecyclerView.Adapter<CRUDDOSENAdapter.View
             txtGelar = view.findViewById(R.id.txtGelar);
             txtEmail = view.findViewById(R.id.txtEmail);
             txtAlamat = view.findViewById(R.id.txtAlamat);
+            view.setOnCreateContextMenuListener(this);
 
 //            view.setOnClickListener(new View.OnClickListener() {
 //                @Override
@@ -94,5 +98,11 @@ public class CRUDDOSENAdapter extends RecyclerView.Adapter<CRUDDOSENAdapter.View
         }
 
 
+        @Override
+        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo menuInfo) {
+            contextMenu.setHeaderTitle("Pilih Aksi");
+            contextMenu.add(this.getAdapterPosition(), view.getId(), 0, "Ubah Data Dosen");
+            contextMenu.add(this.getAdapterPosition(), view.getId(), 0, "Hapus Data Dosen");
+        }
     }
 }

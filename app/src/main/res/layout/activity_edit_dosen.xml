@@ -154,4 +154,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etxtFoto"
+        android:layout_width="174dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text='"https://source.unsplash.com/random"'
+        app:layout_constraintEnd_toStartOf="@+id/btnBrowse"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtFotoDosen"
+        app:layout_constraintTop_toBottomOf="@+id/etxtGelarDosen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

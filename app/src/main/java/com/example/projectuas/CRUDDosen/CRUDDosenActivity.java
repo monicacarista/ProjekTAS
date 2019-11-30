@@ -1,5 +1,6 @@
 package com.example.projectuas.CRUDDosen;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,12 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.projectuas.Adapter.CRUDDOSENAdapter;
 import com.example.projectuas.Model.CRUDDosen;
+import com.example.projectuas.Model.DefaultResult;
 import com.example.projectuas.R;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,18 +31,22 @@ public class CRUDDosenActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CRUDDOSENAdapter CRUDDOSENAdapter;
     private ArrayList<CRUDDosen> crudArrayList;
+
     ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cruddosen);
 
-        Button btnCreate =(Button)findViewById(R.id.btnCreate);
+        recyclerView = findViewById(R.id.rvCruddos);
 
-        btnCreate.setOnClickListener(new View.OnClickListener(){
+        Button btnCreate = (Button) findViewById(R.id.btnCreate);
+
+        btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Intent i = new Intent(CRUDDosenActivity.this,EditDosenActivity.class);
+            public void onClick(View view) {
+                Intent i = new Intent(CRUDDosenActivity.this, EditDosenActivity.class);
                 startActivity(i);
             }
         });
@@ -55,7 +62,7 @@ public class CRUDDosenActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<CRUDDosen>> call, Response<ArrayList<CRUDDosen>> response) {
                 progressDialog.dismiss();
-                recyclerView = findViewById(R.id.rvCruddos);
+                crudArrayList = response.body();
                 CRUDDOSENAdapter = new CRUDDOSENAdapter(response.body());
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CRUDDosenActivity.this);
                 recyclerView.setLayoutManager(layoutManager);
@@ -66,25 +73,64 @@ public class CRUDDosenActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ArrayList<CRUDDosen>> call, Throwable t) {
                 progressDialog.dismiss();
-                Toast.makeText(CRUDDosenActivity.this,"Login Gagal", Toast.LENGTH_SHORT);
+                Toast.makeText(CRUDDosenActivity.this, "Login Gagal", Toast.LENGTH_SHORT);
             }
         });
+        registerForContextMenu(recyclerView);
 
 
 //        CRUDDOSENAdapter = new CRUDDOSENAdapter(crudArrayList);
 //        List<CRUDDosen> crudDosenList;
         //mahasiswaAdapter = new MahasiswaAdapter(List);
 
-
     }
-//    private void addData(){
-//        crudArrayList = new ArrayList<>();
-//        crudArrayList.add(new CRUDDosen("S.Kom","KatonWijana@gmail.com","JOGJA",R.drawable.xx));
-   //     crudArrayList.add(new CRUDDosen("S.Ko","m@gmail.com","JOGJA",R.drawable.xx));
-   //     crudArrayList.add(new CRUDDosen("S.Km","m@gmail.com","JOGJA",R.drawable.xx));
-   //     crudArrayList.add(new CRUDDosen("S.Kll","mo@gmail.com","JOGJA",R.drawable.xx));
-      //  crudArrayList.add(new CRUDDosen("S.Km","monica@gmail.com","JOGJA",R.drawable.xx));
-//
 
+
+
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        CRUDDosen dosen = crudArrayList.get(item.getGroupId());
+        if (item.getTitle() == "Ubah Data Dosen") {
+            Intent intent = new Intent(CRUDDosenActivity.this, EditDosenActivity.class);
+            intent.putExtra("id_dosen", dosen.getId());
+            intent.putExtra("nama_dosen", dosen.getNama());
+            intent.putExtra("nidn", dosen.getNidn());
+            intent.putExtra("alamat_dosen", dosen.getAlamat());
+            intent.putExtra("email_dosen", dosen.getEmail());
+            intent.putExtra("gelar", dosen.getGelar());
+            intent.putExtra("foto", dosen.getFoto());
+            intent.putExtra("is_update", true);
+            startActivity(intent);
+
+        } else if (item.getTitle() == "Hapus Data Dosen") {
+            progressDialog = new ProgressDialog(CRUDDosenActivity.this);
+            progressDialog.show();
+
+            GetDataService service = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
+            Call<DefaultResult> call = service.delete_dosen(
+                    dosen.getId(), "72170133"
+            );
+            call.enqueue(new Callback<DefaultResult>() {
+                @Override
+                public void onResponse(Call<DefaultResult> call, Response<DefaultResult> response) {
+                    progressDialog.dismiss();
+                    Toast.makeText(CRUDDosenActivity.this, "Data terhapus", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CRUDDosenActivity.this, CRUDDosenActivity.class);
+                    startActivity(intent);
+                    finish();
+                    startActivity(intent);
+                }
+
+                @Override
+                public void onFailure(Call<DefaultResult> call, Throwable t) {
+                    progressDialog.dismiss();
+                    Toast.makeText(CRUDDosenActivity.this, "Data gagal  terhapus", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        return super.onContextItemSelected(item);
     }
+}
+
 
